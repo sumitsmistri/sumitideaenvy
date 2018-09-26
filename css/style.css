@@ -4,13 +4,13 @@
     cursor: pointer;
     visibility: hidden;
     width: 30%;
-    margin: auto;
+    margin: 0;
   }
   
   .tiler img { 
     display: block;  
-    margin: auto; 
-    width: 50%;
+    margin: 0; 
+    width: 100%;
     visibility: visible;
   }
   
