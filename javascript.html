@@ -12,7 +12,7 @@
 
     <p>The document.getElementById() method returns the element of specified id.</p>
 
-    <p id="demo1">These will be converted into UPPERCASE letters.</p>
+    <p id="demo1st">These will be converted into UPPERCASE letters.</p>
     <button onclick="upc()">Click to capitalize</button>
     <button onclick="initupc()">Click to go Initial State</button>
 
@@ -63,12 +63,15 @@
 
 
     <script>
+
+
+
         function upc(){
-            document.getElementBy("demo1").style.textTransform = "uppercase";
+            document.getElementById("demo1st").style.textTransform = "uppercase";
         }
 
         function initupc(){
-            document.getElementById("demo1").style.textTransform = "none";
+            document.getElementById("demo1st").style.textTransform = "none";
         }
 
         function classtest(){
