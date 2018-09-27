@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JAVASCRIPT TEST</title>
+</head>
+<body>
+    
+    <h3>1. document.getElementById</h3>
+
+    <p>The document.getElementById() method returns the element of specified id.</p>
+
+    <p id="demo1">These will be converted into UPPERCASE letters.</p>
+    <button onclick="upc()">Click to capitalize</button>
+    <button onclick="initupc()">Click to go Initial State</button>
+
+    <br><br>
+
+    <h3>2. document.getElementByClassName</h3>
+
+    <p>The document.getElementByClassName() method Get all elements that have same class.</p>
+
+    <p class="demo2">These will be converted into UPPERCASE letters and color will change.</p>
+    <h3 class="demo2">These will be converted into UPPERCASE letters and color will change when initialize.</h3>
+
+    <button onclick="classtest()">Click to capitalize</button>
+    <button onclick="classtest2()">Click to go Initial State</button>
+
+    <br><br>
+    
+
+
+    <h3>2. document.querySelector</h3>
+
+    <p>The document.querySelector() method returns the first element that matches a specified CSS selector</p>
+
+    <p class="demo3">These will be converted into small letters.</p>
+    <h3 class="demo3">These will be converted into nothing.</h3>
+
+    <button onclick="qstest()">Click to small</button>
+    <button onclick="qstest2()">Click to go big</button>
+
+    <br><br>
+
+
+    <h3>2. document.querySelectorAll</h3>
+
+    <p>The document.querySelectorAll() method returns the all element that matches a specified CSS selector</p>
+
+    <p class="demo4">These will be converted into UPPERCASE letters.</p>
+    <h3 class="demo4">These will be converted into UPPERCASE letters.</h3>
+
+    <button onclick="qsatest()">Click to change color</button>
+    <button onclick="qsatest2()">Click to go initial state</button>
+
+    <br><br>
+
+
+
+
+
+
+    <script>
+        function upc(){
+            document.getElementBy("demo1").style.textTransform = "uppercase";
+        }
+
+        function initupc(){
+            document.getElementById("demo1").style.textTransform = "none";
+        }
+
+        function classtest(){
+            // var qs = document.getElementsByClassName('demo2');
+             //for(i=0; i<qs.length; i++) {
+               // qs[i].style.backgroundColor = 'blue';
+            var classdemo2 = document.getElementsByClassName("demo2");
+            
+            classdemo2[0].style.textTransform = "uppercase";
+            classdemo2[0].style.color = "blue";
+
+            classdemo2[1].style.textTransform = "uppercase";
+            classdemo2[1].style.color = "black";
+        }
+
+        function classtest2(){
+            var classdemo3 = document.getElementsByClassName("demo2");
+
+            classdemo3[0].style.textTransform = "none";
+            classdemo3[0].style.color = "black";
+            
+            classdemo3[1].style.textTransform = "none";
+            classdemo3[1].style.color = "blue";
+
+            
+        }
+
+
+        function qstest() {
+           
+               var qsdemo3 = document.querySelector('.demo3');
+
+                qsdemo3.style.fontSize = '8px';
+               
+
+        }
+
+        function qstest2(){
+            var qsdemo4 = document.querySelector('.demo3');
+
+            qsdemo4.style.fontSize = '15px';
+            
+            
+        }
+
+        function qsatest(){
+            var qsall = document.querySelectorAll('.demo4');
+                for(i=0; i<qsall.length; i++) {
+                    qsall[i].style.backgroundColor = 'skyblue';
+            
+                 }
+        }
+        function qsatest2(){
+            var qsall2 = document.querySelectorAll('.demo4');
+                for(i=0; i<qsall2.length; i++) {
+                    qsall2[i].style.backgroundColor = 'white';
+            
+                }
+        }
+
+    
+    </script>
+</body>
+</html>
